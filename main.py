@@ -17,8 +17,18 @@ manager.add_product(p2)
 manager.add_product(p3)
 manager.add_product(p4)
 
-# Prikaz svih proizvoda
 manager.display_all_products()
 
-# Prikaz ukupne vrednosti inventara
 manager.total_value()
+
+from cart import Cart
+
+
+cart = Cart()
+
+if len(manager.products) >= 3:
+    cart.add_to_cart(manager.products[0])
+    cart.add_to_cart(manager.products[1])
+    cart.add_to_cart(manager.products[2])
+
+cart.display_cart()
